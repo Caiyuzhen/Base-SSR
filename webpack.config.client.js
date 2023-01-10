@@ -10,23 +10,21 @@ module.exports = {
 		path: path.join(__dirname, 'dist'), /* 打包后放在哪里 */
 	},
 	module: {
-		rules: [
-			{
-				test: /\.(ts|tsx)$/, /* 要编译的文件类型 ts 或 tsx !*/
-				use: [
-					{
-						loader: 'babel-loader',/* 解析编译器 */
-						options: {
-							presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-						}
-					},
-					{
-						loader: 'ts-loader'
-					},
-				],
-				exclude: /node_modules/,/* 排除掉 node_modules 库 */
-			},
-		]
+		rules: [{
+			test: /\.(ts|tsx)$/, /* 要编译的文件类型 ts 或 tsx !*/
+			use: [
+				{
+					loader: 'babel-loader',/* 解析编译器 */
+					options: {
+						presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+					}
+				},
+				{
+					loader: 'ts-loader'
+				},
+			],
+			exclude: /node_modules/,/* 排除掉 node_modules 库 */
+		}]
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx']
