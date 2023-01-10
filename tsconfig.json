@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "module": "ES6",
-        "target": "ES5",
+        "target": "ES6",
+		"outDir": "./",
         "lib": [
             "DOM",
             "DOM.Iterable",
@@ -25,5 +26,6 @@
     },
     "include": [
         "src/**/*"
-    ]
+    ],
+	"exclude": ["node_modules", "dist"]
 }

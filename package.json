@@ -29,6 +29,9 @@
   "scripts": {
 	"build:client": "webpack --config webpack.config.client.js",
 	"build:server": "webpack --config webpack.config.server.js",
-	"dev:client": "webpack-dev-server"
+	"dev:client": "webpack-dev-server",
+	"build": "yarn build:client && yarn build:server", 
+	"start": "node .src/server/server.js"
   }
 }
+

@@ -8,6 +8,7 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',/* 打包后的文件名 */
 		path: path.join(__dirname, 'dist'), /* 打包后放在哪里 */
+		publicPath: '/public', /* 静态资源托管的路径 */
 	},
 	module: {
 		rules: [{
